@@ -1,0 +1,8 @@
+-- 경제, id 저자명 출판일(오름) 리스트
+
+select BOOK_ID, AUTHOR_NAME
+, DATE_FORMAT(PUBLISHED_DATE,'%Y-%m-%d')
+from BOOK AS B
+JOIN AUTHOR AS A ON B.AUTHOR_ID = A.AUTHOR_ID
+where CATEGORY = '경제'
+ORDER BY PUBLISHED_DATE ASC
